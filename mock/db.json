@@ -1,0 +1,12 @@
+{
+  "tickets": [{
+    "id": "1",
+    "status": "open",
+    "requester": "cust",
+    "priority": "normal",
+    "createdAt": "",
+    "updatedAt": "",
+    "subject": "",
+    "description": ""
+  }]
+}
