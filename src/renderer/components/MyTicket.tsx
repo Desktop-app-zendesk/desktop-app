@@ -1,9 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-interface MYTicketProps {}
-
-export const MyTicket: React.FC<MYTicketProps> = (props) => {
+function MyTicket() {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate('/');
@@ -23,7 +21,7 @@ export const MyTicket: React.FC<MYTicketProps> = (props) => {
               className="inline-block px-7 py-3 mr-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"
-              role="button"
+              type="button"
               onClick={handleClick}
             >
               Back
@@ -33,4 +31,6 @@ export const MyTicket: React.FC<MYTicketProps> = (props) => {
       </section>
     </div>
   );
-};
+}
+
+export default MyTicket;

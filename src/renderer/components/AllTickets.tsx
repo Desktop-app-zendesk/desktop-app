@@ -1,9 +1,6 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-interface AllTicketsProps {}
-
-export const AllTickets: React.FC<AllTicketsProps> = (props) => {
+function AllTickets() {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate('/');
@@ -23,7 +20,7 @@ export const AllTickets: React.FC<AllTicketsProps> = (props) => {
               className="inline-block px-7 py-3 mr-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"
-              role="button"
+              type="button"
               onClick={handleClick}
             >
               Back
@@ -33,4 +30,6 @@ export const AllTickets: React.FC<AllTicketsProps> = (props) => {
       </section>
     </div>
   );
-};
+}
+
+export default AllTickets;

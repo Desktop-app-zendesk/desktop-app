@@ -3,9 +3,11 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Test() {
   const navigate = useNavigate();
-  const handleClick = (e) => {
-    e.target.id === 'myticket' ? navigate('/myTicket') : navigate('/allTickets');
-  };
+  function handleClick(e: any) {
+    e.target.id === 'myticket'
+      ? navigate('/myTicket')
+      : navigate('/allTickets');
+  }
   return (
     <section className="text-gray-600 body-font">
       {/* Section: Design Block */}
@@ -114,20 +116,20 @@ export default function Test() {
           </h1>
           <button
             id="allticket"
+            type="button"
             className="inline-block px-7 py-3 mr-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light"
-            role="button"
             onClick={handleClick}
           >
             All Tickets
           </button>
           <button
             id="myticket"
+            type="button"
             className="inline-block px-7 py-3 mr-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light"
-            role="button"
             onClick={handleClick}
           >
             My Ticket
@@ -242,17 +244,16 @@ export default function Test() {
                   />
                 </div>
                 <div className="form-group form-check text-center mb-6">
-                  <input
-                    type="checkbox"
-                    className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
-                    id="exampleCheck87"
-                    defaultChecked=""
-                  />
                   <label
                     className="form-check-label inline-block text-gray-800"
                     htmlFor="exampleCheck87"
                   >
                     Send me a copy of this message
+                    <input
+                      type="checkbox"
+                      className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
+                      id="exampleCheck87"
+                    />
                   </label>
                 </div>
                 <button
