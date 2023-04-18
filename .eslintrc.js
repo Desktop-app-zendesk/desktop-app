@@ -8,6 +8,13 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'import/no-import-module-exports': 'off',
+    'no-unused-expressions': ['error', { allowTernary: true }],
+    'prettier/prettier': [
+      'error',
+      { endOfLine: 'auto' },
+      { usePrettierrc: true },
+    ], // Use our .prettierrc file as source
+    'react/prop-types': 'off',
   },
   parserOptions: {
     ecmaVersion: 2020,
