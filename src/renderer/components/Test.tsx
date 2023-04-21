@@ -255,7 +255,7 @@ export default function Test() {
                       id="exampleCheck87"
                     />
                   </label>
-                </div> */}
+                </div>
                 <button
                   type="submit"
                   className="

@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AppContext } from '../containers/AppContext';
 
 function MyTicket() {
+  const { appState, setAppState } = useContext(AppContext);
+
+  useEffect(() => {
+    const obj = {
+      name: 'Amol',
+      City: 'Pune',
+    };
+    setAppState(obj);
+  }, [setAppState]);
+  const { name } = appState;
   const navigate = useNavigate();
   const handleClick = () => {
     navigate('/');
@@ -13,6 +24,9 @@ function MyTicket() {
           <div className="mb-6 lg:mb-0">
             <h2 className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight">
               My Tickets
+              <div className="">
+                <div className="">{name}</div>
+              </div>
             </h2>
           </div>
           <div className="mb-6 lg:mb-0">
