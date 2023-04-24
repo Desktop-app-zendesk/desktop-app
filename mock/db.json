@@ -1,13 +1,318 @@
 {
-  "tickets": [{
-    "id": "1",
-    "status": "open",
-    "requester": "cust",
-    "priority": "normal",
-    "createdAt": "",
-    "updatedAt": "",
-    "subject": "",
-    "description": "",
-    "test": ""
-  }]
+  "tickets": [
+      {
+          "url": "https://persistentsystems188.zendesk.com/api/v2/tickets/1.json",
+          "id": 1,
+          "external_id": null,
+          "via": {
+              "channel": "sample_ticket",
+              "source": {
+                  "from": {},
+                  "to": {},
+                  "rel": null
+              }
+          },
+          "created_at": "2023-04-21T08:20:54Z",
+          "updated_at": "2023-04-21T08:20:54Z",
+          "type": "incident",
+          "subject": "Sample ticket: Meet the ticket",
+          "raw_subject": "Sample ticket: Meet the ticket",
+          "description": "Hi there,\n\nI’m sending an email because I’m having a problem setting up your new product. Can you help me troubleshoot?\n\nThanks,\n The Customer\n\n",
+          "priority": "normal",
+          "status": "open",
+          "recipient": null,
+          "requester_id": 10526004258461,
+          "submitter_id": 10525966557597,
+          "assignee_id": 10525966557597,
+          "organization_id": null,
+          "group_id": 10525957735581,
+          "collaborator_ids": [],
+          "follower_ids": [],
+          "email_cc_ids": [],
+          "forum_topic_id": null,
+          "problem_id": null,
+          "has_incidents": false,
+          "is_public": true,
+          "due_at": null,
+          "tags": [
+              "sample",
+              "support",
+              "zendesk"
+          ],
+          "custom_fields": [],
+          "satisfaction_rating": null,
+          "sharing_agreement_ids": [],
+          "custom_status_id": 10525988561309,
+          "fields": [],
+          "followup_ids": [],
+          "ticket_form_id": 10525973685789,
+          "brand_id": 10526033901725,
+          "allow_channelback": false,
+          "allow_attachments": true,
+          "from_messaging_channel": false
+      },
+      {
+          "url": "https://persistentsystems188.zendesk.com/api/v2/tickets/2.json",
+          "id": 2,
+          "external_id": null,
+          "via": {
+              "channel": "web",
+              "source": {
+                  "from": {},
+                  "to": {},
+                  "rel": null
+              }
+          },
+          "created_at": "2023-04-21T08:24:22Z",
+          "updated_at": "2023-04-21T08:24:22Z",
+          "type": "incident",
+          "subject": "test zendesk",
+          "raw_subject": "test zendesk",
+          "description": "this is test ticket",
+          "priority": "low",
+          "status": "open",
+          "recipient": null,
+          "requester_id": 10526043601053,
+          "submitter_id": 10525966557597,
+          "assignee_id": 10525966557597,
+          "organization_id": null,
+          "group_id": 10525957735581,
+          "collaborator_ids": [],
+          "follower_ids": [],
+          "email_cc_ids": [],
+          "forum_topic_id": null,
+          "problem_id": null,
+          "has_incidents": false,
+          "is_public": true,
+          "due_at": null,
+          "tags": [
+              "test"
+          ],
+          "custom_fields": [],
+          "satisfaction_rating": null,
+          "sharing_agreement_ids": [],
+          "custom_status_id": 10525988561309,
+          "fields": [],
+          "followup_ids": [],
+          "ticket_form_id": 10525973685789,
+          "brand_id": 10526033901725,
+          "allow_channelback": false,
+          "allow_attachments": true,
+          "from_messaging_channel": false
+      },
+      {
+          "url": "https://persistentsystems188.zendesk.com/api/v2/tickets/3.json",
+          "id": 3,
+          "external_id": null,
+          "via": {
+              "channel": "web",
+              "source": {
+                  "from": {},
+                  "to": {},
+                  "rel": null
+              }
+          },
+          "created_at": "2023-04-21T09:59:11Z",
+          "updated_at": "2023-04-21T09:59:11Z",
+          "type": "problem",
+          "subject": "Test 2",
+          "raw_subject": "Test 2",
+          "description": "This is test ticket number 2",
+          "priority": "high",
+          "status": "open",
+          "recipient": null,
+          "requester_id": 10525966557597,
+          "submitter_id": 10525966557597,
+          "assignee_id": 10525966557597,
+          "organization_id": 10526004058397,
+          "group_id": 10525957735581,
+          "collaborator_ids": [],
+          "follower_ids": [],
+          "email_cc_ids": [],
+          "forum_topic_id": null,
+          "problem_id": null,
+          "has_incidents": false,
+          "is_public": true,
+          "due_at": null,
+          "tags": [
+              "test2"
+          ],
+          "custom_fields": [],
+          "satisfaction_rating": null,
+          "sharing_agreement_ids": [],
+          "custom_status_id": 10525988561309,
+          "fields": [],
+          "followup_ids": [],
+          "ticket_form_id": 10525973685789,
+          "brand_id": 10526033901725,
+          "allow_channelback": false,
+          "allow_attachments": true,
+          "from_messaging_channel": false
+      },
+      {
+          "url": "https://persistentsystems188.zendesk.com/api/v2/tickets/4.json",
+          "id": 4,
+          "external_id": null,
+          "via": {
+              "channel": "web",
+              "source": {
+                  "from": {},
+                  "to": {},
+                  "rel": null
+              }
+          },
+          "created_at": "2023-04-21T09:59:52Z",
+          "updated_at": "2023-04-21T09:59:52Z",
+          "type": "question",
+          "subject": "Test 3",
+          "raw_subject": "Test 3",
+          "description": "This is test ticket number 3",
+          "priority": "normal",
+          "status": "open",
+          "recipient": null,
+          "requester_id": 10525966557597,
+          "submitter_id": 10525966557597,
+          "assignee_id": 10525966557597,
+          "organization_id": 10526004058397,
+          "group_id": 10525957735581,
+          "collaborator_ids": [],
+          "follower_ids": [],
+          "email_cc_ids": [],
+          "forum_topic_id": null,
+          "problem_id": null,
+          "has_incidents": false,
+          "is_public": true,
+          "due_at": null,
+          "tags": [
+              "test3"
+          ],
+          "custom_fields": [],
+          "satisfaction_rating": null,
+          "sharing_agreement_ids": [],
+          "custom_status_id": 10525988561309,
+          "fields": [],
+          "followup_ids": [],
+          "ticket_form_id": 10525973685789,
+          "brand_id": 10526033901725,
+          "allow_channelback": false,
+          "allow_attachments": true,
+          "from_messaging_channel": false
+      }
+  ],
+  "all_tickets": [
+      {
+        "assignee_id": 235323,
+        "collaborator_ids": [
+          35334,
+          234
+        ],
+        "created_at": "2009-07-20T22:55:29Z",
+        "custom_fields": [
+          {
+            "id": 27642,
+            "value": "745"
+          },
+          {
+            "id": 27648,
+            "value": "yes"
+          }
+        ],
+        "custom_status_id": 123,
+        "description": "The fire is very colorful.",
+        "due_at": null,
+        "external_id": "ahg35h3jh",
+        "follower_ids": [
+          35334,
+          234
+        ],
+        "from_messaging_channel": false,
+        "group_id": 98738,
+        "has_incidents": false,
+        "id": 35436,
+        "organization_id": 509974,
+        "priority": "high",
+        "problem_id": 9873764,
+        "raw_subject": "{{dc.printer_on_fire}}",
+        "recipient": "support@company.com",
+        "requester_id": 20978392,
+        "satisfaction_rating": {
+          "comment": "Great support!",
+          "id": 1234,
+          "score": "good"
+        },
+        "sharing_agreement_ids": [
+          84432
+        ],
+        "status": "open",
+        "subject": "Help, my printer is on fire!",
+        "submitter_id": 76872,
+        "tags": [
+          "enterprise",
+          "other_tag"
+        ],
+        "type": "incident",
+        "updated_at": "2011-05-05T10:38:52Z",
+        "url": "https://company.zendesk.com/api/v2/tickets/35436.json",
+        "via": {
+          "channel": "web"
+        }
+      },
+      {
+        "assignee_id": 235324,
+        "collaborator_ids": [
+          35334,
+          234
+        ],
+        "created_at": "2009-07-20T22:55:29Z",
+        "custom_fields": [
+          {
+            "id": 27642,
+            "value": "745"
+          },
+          {
+            "id": 27648,
+            "value": "yes"
+          }
+        ],
+        "custom_status_id": 123,
+        "description": "The fire is very colorful.",
+        "due_at": null,
+        "external_id": "ahg35h3jh",
+        "follower_ids": [
+          35334,
+          234
+        ],
+        "from_messaging_channel": false,
+        "group_id": 98738,
+        "has_incidents": false,
+        "id": 35436,
+        "organization_id": 509974,
+        "priority": "high",
+        "problem_id": 9873764,
+        "raw_subject": "{{dc.printer_on_fire}}",
+        "recipient": "support@company.com",
+        "requester_id": 20978392,
+        "satisfaction_rating": {
+          "comment": "Great support!",
+          "id": 1234,
+          "score": "good"
+        },
+        "sharing_agreement_ids": [
+          84432
+        ],
+        "status": "open",
+        "subject": "Help, my printer is on fire!",
+        "submitter_id": 76872,
+        "tags": [
+          "enterprise",
+          "other_tag"
+        ],
+        "type": "incident",
+        "updated_at": "2011-05-05T10:38:52Z",
+        "url": "https://company.zendesk.com/api/v2/tickets/35436.json",
+        "via": {
+          "channel": "web"
+        }
+      }
+    ]
 }
