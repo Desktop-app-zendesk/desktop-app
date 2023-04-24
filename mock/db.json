@@ -199,7 +199,7 @@
           "from_messaging_channel": false
       }
   ],
-  "all_tickets": [
+  "show_many": [
       {
         "assignee_id": 235323,
         "collaborator_ids": [
