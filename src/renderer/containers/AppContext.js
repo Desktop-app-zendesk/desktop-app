@@ -1,13 +1,13 @@
-import React, { createContext, useState, useMemo } from 'react';
+import { createContext, useState, useMemo } from 'react';
 
 const initialState = {
-  name: 'Amol',
+  name: 'Persistent',
 };
 
 export const AppContext = createContext(initialState);
 
 export default function AppProvider({ children }) {
-  const [appState, setAppState] = useState({ name: 'Amol' });
+  const [appState, setAppState] = useState({ name: 'Persistent' });
   const value = useMemo(() => {
     return {
       appState,
