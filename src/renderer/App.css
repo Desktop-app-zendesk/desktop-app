@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #f5f5f5;
+}
+
+.zen-tab-headers {
+  @apply border border-zen-green-800 text-sm py-1 px-2 hover:bg-zen-green-800 hover:text-white;
+}
+
+.zen-tab-headers.selected {
+  @apply bg-zen-green-800 text-white
+}
