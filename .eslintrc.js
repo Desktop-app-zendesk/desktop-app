@@ -15,6 +15,7 @@ module.exports = {
       { usePrettierrc: true },
     ], // Use our .prettierrc file as source
     'react/prop-types': 'off',
+    'jsx-a11y/control-has-associated-label': 'off',
   },
   parserOptions: {
     ecmaVersion: 2020,
