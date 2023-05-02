@@ -65,6 +65,7 @@
     }
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.17",
     "@material-tailwind/react": "^1.4.2",
     "@phosphor-icons/react": "^2.0.8",
     "electron-debug": "^3.2.0",
@@ -74,6 +75,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
+    "react-select": "^5.7.2",
     "react-simple-widgets": "^6.7.0"
   },
   "devDependencies": {
