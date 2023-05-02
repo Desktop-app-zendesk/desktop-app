@@ -13,7 +13,3 @@ body {
 .zen-tab-headers.selected {
   @apply bg-zen-green-800 text-white;
 }
-
-.add-cursor {
-  cursor: pointer;
-}

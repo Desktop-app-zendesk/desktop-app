@@ -22,19 +22,19 @@ function TicketDetails() {
 
   return (
     <div>
-      <div className="border-t border-b border-solid border-zen-border py-2">
+      <div className="border-t border-b border-solid border-zen-gray-200 py-2">
         <div className="inline-flex rounded-md shadow-sm m-1" role="group">
           <DialogForm
             id="add_new_organization"
             title="Add new organization"
             dialogBtnName="Example (create)"
-            className="px-2 py-1 text-sm font-medium text-zen-gray-text border border-zen-grayborder rounded-l-lg rounded-r-none bg-zen-whitebg hover:bg-zen-selectedbg text-lowercase"
+            className="px-2 py-1 text-sm font-medium text-zen-gray-800 border border-zen-gray-200 rounded-l-lg rounded-r-none bg-zen-white-100 hover:bg-zen-gray-300 shadow-none normal-case"
           />
           <button
             type="button"
-            className={`px-2 py-1 text-sm font-medium text-zen-gray-text border border-zen-grayborder  ${
-              segment === 'customer' ? 'bg-zen-selectedbg' : 'bg-zen-whitebg'
-            } hover:bg-zen-selectedbg`}
+            className={`px-2 py-1 text-sm font-medium text-zen-gray-800 border border-zen-gray-200  ${
+              segment === 'customer' ? 'bg-zen-gray-300' : 'bg-zen-white-100'
+            } hover:bg-zen-gray-300`}
             onClick={() => {
               setSegment('customer');
             }}
@@ -43,23 +43,21 @@ function TicketDetails() {
           </button>
           <button
             type="button"
-            className={`px-2 py-1 text-sm font-medium text-zen-gray-text border border-zen-grayborder rounded-r-md ${
-              segment === 'incident' ? 'bg-zen-selectedbg' : 'bg-zen-whitebg'
-            } hover:bg-zen-selectedbg`}
+            className={`px-2 py-1 text-sm font-medium text-gray-800 border border-gray-200 rounded-r-md ${
+              segment === 'incident' ? 'bg-zen-gray-300' : 'bg-zen-white-100'
+            } hover:bg-zen-gray-300`}
             onClick={() => {
               setSegment('incident');
             }}
           >
-            <span className="inline-block  text-white max-w-[max-content]  max-h-[max-content]  rounded-md bg-zen-open m-1 px-1">
+            <span className="inline-block  text-white max-w-[max-content]  max-h-[max-content]  rounded-md bg-zen-orange-500 m-1 px-1">
               Open
             </span>
             Incident
           </button>
         </div>
       </div>
-      <div>
-        <div className="px-1">{getSelectedSegment()}</div>
-      </div>
+      <div className="px-1">{getSelectedSegment()}</div>
     </div>
   );
 }

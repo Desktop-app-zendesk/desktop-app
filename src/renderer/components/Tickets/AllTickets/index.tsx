@@ -8,7 +8,7 @@ function AllTickets() {
   return (
     <section>
       <div
-        className="relative overflow-x-12 add-cursor"
+        className="relative overflow-x-12 cursor-pointer"
         onClick={() => {
           handleClick();
         }}

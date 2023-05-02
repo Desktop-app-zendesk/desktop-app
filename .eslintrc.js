@@ -7,6 +7,7 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
+    "jsx-a11y/label-has-associated-control": "off"
     'import/no-import-module-exports': 'off',
     'no-unused-expressions': ['error', { allowTernary: true }],
     'prettier/prettier': [

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import { Input } from '@material-tailwind/react';
 
 type Props = { id: string; inputLabelName: string };

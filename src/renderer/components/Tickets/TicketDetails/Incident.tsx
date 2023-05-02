@@ -1,11 +1,13 @@
 export default function Incident() {
   return (
     <div>
-      <div className="border-b border-solid border-zen-border py-1">
-        <div className="zen-gray-text text-14">
-          Sample ticket: Meet the ticket
+      <div className="border-b border-solid border-zen-gray-200 py-1">
+        <div>
+          <div className="text-zen-gray-800 text-sm">
+            Sample ticket: Meet the ticket
+          </div>
+          <div className="text-xs text-zen-gray-500">Via sample ticket</div>
         </div>
-        <div className="text-xs text-zen-header-label">Via sample ticket</div>
         <div>
           <button type="button">
             <svg
@@ -14,7 +16,7 @@ export default function Incident() {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-5 h-5 text-zen-header-label"
+              className="w-5 h-5 text-zen-gray-500"
             >
               <path
                 strokeLinecap="round"
@@ -30,7 +32,7 @@ export default function Incident() {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-5 h-5 text-zen-header-label"
+              className="w-5 h-5 text-zen-gray-500"
             >
               <path
                 strokeLinecap="round"
@@ -42,17 +44,11 @@ export default function Incident() {
           <button type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-5 h-5 text-zen-header-label"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+              className="w-5 h-5 text-zen-gray-500"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
+              <path d="M136,80v43.47l36.12,21.67a8,8,0,0,1-8.24,13.72l-40-24A8,8,0,0,1,120,128V80a8,8,0,0,1,16,0Zm-8-48A95.44,95.44,0,0,0,60.08,60.15C52.81,67.51,46.35,74.59,40,82V64a8,8,0,0,0-16,0v40a8,8,0,0,0,8,8H72a8,8,0,0,0,0-16H49c7.15-8.42,14.27-16.35,22.39-24.57a80,80,0,1,1,1.66,114.75,8,8,0,1,0-11,11.64A96,96,0,1,0,128,32Z" />
             </svg>
           </button>
         </div>

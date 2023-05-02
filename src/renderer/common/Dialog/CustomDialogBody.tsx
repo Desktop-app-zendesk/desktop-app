@@ -19,7 +19,7 @@ function CustomDialogBody(props: Props) {
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
                 Domains
-                <div className="text-zen-gray-text">
+                <div className="text-zen-gray-800">
                   Enter domains separated by a space. For example,
                   &quot;acme.com ajax.com&quot;. Emails from these domains will
                   be added to the organization.
@@ -43,7 +43,7 @@ function CustomDialogBody(props: Props) {
         );
       }
       default: {
-        return <div>Active Component</div>;
+        return '';
       }
     }
   };
