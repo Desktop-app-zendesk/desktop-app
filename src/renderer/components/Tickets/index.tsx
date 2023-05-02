@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import Filter from 'renderer/common/Filter';
-import Header from '../../common/Header';
 import AllTickets from './AllTickets';
 import MyTicket from './MyTickets';
 
@@ -23,9 +21,7 @@ export default function Tickets() {
 
   return (
     <div>
-      <Header />
-      <Filter />
-      <div className="px-4">
+      <div className="px-4 ">
         <button
           className={`zen-tab-headers ${
             tab === 'allTickets' ? 'selected' : ''

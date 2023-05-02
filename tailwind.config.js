@@ -7,6 +7,14 @@ module.exports = withMT({
     extend: {
       colors: {
         'zen-green-800': '#03363D',
+        'zen-whitebg': '#F8F9F9',
+        'zen-grayborder': '#D8DCDE',
+        'zen-selectedbg': '#D4D4D8',
+        'zen-open': '#E34F32',
+        'zen-gray-text': '#2F3941',
+        'zen-blue-text': '#1F73B7',
+        'zen-border': '#D8DCDE',
+        'zen-header-label': '#68737D',
       },
       fontSize: {
         sm: '0.8rem',
