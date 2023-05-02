@@ -57,7 +57,7 @@ function TicketDetails() {
           </button>
         </div>
       </div>
-      <div className="px-1">{getSelectedSegment()}</div>
+      <div>{getSelectedSegment()}</div>
     </div>
   );
 }
