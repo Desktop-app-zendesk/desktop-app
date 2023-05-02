@@ -1,4 +1,4 @@
-export default function Incident() {
+function Incident() {
   return (
     <div className="flex border-b border-solid border-zen-gray-200 p-2">
       <div className="mr-8">
@@ -54,3 +54,4 @@ export default function Incident() {
     </div>
   );
 }
+export default Incident;

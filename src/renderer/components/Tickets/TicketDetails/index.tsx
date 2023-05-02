@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import DialogForm from '../../../common/Dialog';
-import Incident from './Incident';
-import Customer from './Customer';
+import Incident from '../TicketDetails/Incident';
+import Customer from '../TicketDetails/Customer';
 
 function TicketDetails() {
   const [segment, setSegment] = useState('incident');

@@ -1,9 +1,9 @@
-import Tickets from '../MyTickets';
+import MyTickets from '../../MyTickets';
 
 export default function Customer() {
   return (
     <div>
-      <Tickets />
+      <MyTickets />
     </div>
   );
 }
