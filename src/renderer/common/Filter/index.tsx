@@ -1,11 +1,5 @@
-import {
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
-} from '@material-tailwind/react';
-import { Funnel, ArrowCircleLeft} from '@phosphor-icons/react';
-import { useState, useEffect } from 'react'; 
+import {Funnel, ArrowCircleLeft} from '@phosphor-icons/react';
+import {useState} from 'react'; 
 
 function Sidebar() {
   const [showSidebar, setShowSidebar] = useState(false);
