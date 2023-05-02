@@ -1,5 +1,5 @@
-import {Funnel, ArrowCircleLeft} from '@phosphor-icons/react';
-import {useState} from 'react'; 
+import { Funnel, ArrowCircleLeft } from '@phosphor-icons/react';
+import { useState } from 'react';
 
 function Sidebar() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -28,22 +28,21 @@ function Sidebar() {
           showSidebar ? 'translate-x-0 ' : 'translate-x-full'
         }`}
       >
-    
         <label
-          htmlFor="countries"
+          htmlFor="selection"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
-        Ticket Status
+          Ticket Status
+          <select
+            id="selection"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+            <option value="FR">France</option>
+            <option value="DE">Germany</option>
+          </select>
         </label>
-        <select
-          id="countries"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        >
-          <option value="US">United States</option>
-          <option value="CA">Canada</option>
-          <option value="FR">France</option>
-          <option value="DE">Germany</option>
-        </select>
       </div>
     </div>
   );
