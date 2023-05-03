@@ -1,9 +1,9 @@
-import ExapandableTable from '../MyTickets/ExpandableTable'
+import App from './ExpandableTable';
 
 function AllTickets() {
   return (
     <div>
-      <ExapandableTable/>
+      <App />
     </div>
     // <section>
     //   <div className="relative overflow-x-12">

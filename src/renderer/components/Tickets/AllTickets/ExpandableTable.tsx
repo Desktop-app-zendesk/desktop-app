@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { data } from './data';
+import { data } from '../AllTickets/data';
 type DataRow = {
   id: number;
   open: string;
@@ -13,7 +13,6 @@ type TableProps = {
 };
 
 const emojis = ['👉', '👇', ];
-
 export const ExpandableTableRow: React.FC<{ data: DataRow }> = ({ data }) => {
   const [expanded, setExpanded] = useState(false);
   const [currentEmoji, setCurrentEmoji] = useState(emojis[0]);
@@ -31,10 +30,7 @@ export const ExpandableTableRow: React.FC<{ data: DataRow }> = ({ data }) => {
           <table className="w-full text-sm mt-1 ">
             <tbody>
               <tr className="border-b">
-                <td className="px-6" onClick={handleEmojiToggle} >
-                 
-                 {currentEmoji} {data.open}
-                </td>
+                <td className="px-6" onClick={handleEmojiToggle}>{currentEmoji} {data.open}</td>
                 <td className="pl-80">{data.sampleticket}</td>
                 <td className="pl-96 ml-96  text-left">{data.details}</td>
               </tr>
