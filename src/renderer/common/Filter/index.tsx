@@ -7,13 +7,13 @@ function Sidebar() {
   return (
     <div className="flex items-center justify-end mb-1 px-4">
       <button
-          className="bg-zen-green-800 px-1 py-1 rounded text-white"
-          type="button"
-          onClick={() => setShowSidebar(!showSidebar)}
-        >
-          <Funnel size={12} color="#FFFFFF" />
-        </button>
- 
+        className="bg-zen-green-800 px-1 py-1 rounded text-white"
+        type="button"
+        onClick={() => setShowSidebar(!showSidebar)}
+      >
+        <Funnel size={12} color="#FFFFFF" />
+      </button>
+
       {showSidebar && (
         <button
           className="flex text-4xl text-black items-center cursor-pointer fixed right-10 top-6 z-50"
@@ -22,9 +22,8 @@ function Sidebar() {
         >
           <ArrowCircleLeft size={32} />
         </button>
-      )
-}
-    
+      )}
+
       <div
         className={`top-0 right-0 bg-white p-20 pl-22 pr-23 px-5 py-14 text-white fixed h-full z-40  ease-in-out duration-300 ${
           showSidebar ? 'translate-x-0 ' : 'translate-x-full'
@@ -100,7 +99,7 @@ function Sidebar() {
           htmlFor="selection"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white "
         >
-         Priority
+          Priority
           <select
             id="selection"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
