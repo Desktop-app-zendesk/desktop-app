@@ -74,7 +74,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
-    "react-simple-widgets": "^6.7.0"
+    "react-simple-widgets": "^6.7.0",
+    "react-table": "^7.8.0"
   },
   "devDependencies": {
     "@electron/notarize": "^1.2.3",
@@ -88,6 +89,7 @@
     "@types/node": "18.13.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "@types/react-table": "^7.7.14",
     "@types/react-test-renderer": "^18.0.0",
     "@types/terser-webpack-plugin": "^5.0.4",
     "@types/webpack-bundle-analyzer": "^4.6.0",
