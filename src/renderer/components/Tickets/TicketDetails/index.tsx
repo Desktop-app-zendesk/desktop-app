@@ -28,7 +28,7 @@ function TicketDetails() {
             id="add_new_organization"
             title="Add new organization"
             dialogBtnName="Example (create)"
-            className="px-2 py-1 text-sm font-medium text-zen-gray-800 border border-zen-gray-200 rounded-l-lg rounded-r-none bg-zen-white-100 hover:bg-zen-gray-300 shadow-none normal-case"
+            className="px-2 py-1 text-sm font-medium text-zen-gray-800 border border-zen-gray-200 rounded-l-lg rounded-r-none bg-zen-white-100 hover:bg-zen-gray-300 shadow-none normal-case hover:shadow-none"
           />
           <button
             type="button"
