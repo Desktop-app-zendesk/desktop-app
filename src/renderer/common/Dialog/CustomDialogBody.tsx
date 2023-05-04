@@ -16,10 +16,10 @@ function CustomDialogBody(props: Props) {
             <div>
               <label
                 htmlFor="domains"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mt-3 font-semibold text-zen-gray-800 dark:text-white"
               >
                 Domains
-                <div className="text-zen-gray-800">
+                <div className=" text-sm text-zen-gray-800 font-medium">
                   Enter domains separated by a space. For example,
                   &quot;acme.com ajax.com&quot;. Emails from these domains will
                   be added to the organization.
@@ -27,7 +27,7 @@ function CustomDialogBody(props: Props) {
                 <input
                   type="text"
                   id="domains"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 mt-3 border border-gray-300 text-zen-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 />
               </label>
             </div>

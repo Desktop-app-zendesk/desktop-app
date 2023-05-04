@@ -6,8 +6,9 @@ export default function InputField(props: Props) {
 
   return (
     <div>
-      <label htmlFor={id} className="block font-medium text-gray-700 mb-1" />
-      {inputLabelName}
+      <label htmlFor={id} className="block  text-zen-gray-800 font-semibold">
+        {inputLabelName}
+      </label>
       <Input id={id} variant="outlined" />
     </div>
   );
