@@ -1,13 +1,13 @@
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import ExpandableRowTable from './ExpandableRowTable';
 
 function AllTickets() {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate('/ticket-details');
-  };
+  // const navigate = useNavigate();
+  // const handleClick = () => {
+  //   navigate('/ticket-details');
+  // };
   return (
-    <ExpandableRowTable/>
+    <ExpandableRowTable row={undefined} />
     // <section>
     //   <div
     //     className="relative overflow-x-12 cursor-pointer"

@@ -1,6 +1,7 @@
+/* eslint-disable react/function-component-definition */
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useMemo, useState } from 'react';
-import { useTable, Column } from 'react-table';
-import { TableOptions } from 'react-table';
+import { useTable, Column, TableOptions } from 'react-table';
 
 interface Data {
   id: number;
@@ -9,7 +10,7 @@ interface Data {
   email: string;
   requester: string;
   requested: string;
-  priority:string;
+  priority: string;
 }
 
 const data: Data[] = [
@@ -18,30 +19,27 @@ const data: Data[] = [
     ticketstatus: 'Close',
     subject: 'Zendesk Site not works properly',
     email: 'john.doe@example.com',
-    requester:'Customer',
-    requested:'26jan 2023',
-    priority:'Medium'
-    
+    requester: 'Customer',
+    requested: '26jan 2023',
+    priority: 'Medium',
   },
   {
     id: 2,
     ticketstatus: 'Open',
     subject: 'site Error occurs on tickets creates',
     email: 'jane.doe@example.com',
-    requester:'Customer',
-    requested:'1jan 2023',
-    priority:'Low'
-
+    requester: 'Customer',
+    requested: '1jan 2023',
+    priority: 'Low',
   },
   {
     id: 3,
     ticketstatus: 'Close',
     subject: 'Zendesk call features not working',
     email: 'bob.smith@example.com',
-    requester:'Customer',
-    requested:'15march 2023',
-    priority:'High'
-
+    requester: 'Customer',
+    requested: '15march 2023',
+    priority: 'High',
   },
 ];
 
@@ -80,7 +78,7 @@ const Row: React.FC<RowProps> = ({ row }) => {
   return (
     <>
       <tr onClick={() => setIsExpanded(!isExpanded)} className="border-b">
-        <td className="py-1" onClick={handleEmojiToggle}>
+        <td className="py-1" onClick={handleEmojiToggle} aria-hidden="true">
           {currentEmoji}
           {original.ticketstatus}
         </td>
@@ -103,10 +101,10 @@ const Row: React.FC<RowProps> = ({ row }) => {
   );
 };
 
-const ExpandableRowTable: React.FC = () => {
+const ExpandableRowTable: React.FC<RowProps> = () => {
   const tableOptions: TableOptions<Data> = useMemo(
     () => ({ columns, data }),
-    [columns, data]
+    []
   );
   const tableInstance = useTable(tableOptions);
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
@@ -121,10 +119,7 @@ const ExpandableRowTable: React.FC = () => {
             className="border-t border-b"
           >
             {headerGroup.headers.map((column) => (
-              <th
-                {...column.getHeaderProps()}
-                className="  py-4 text-sm "
-              >
+              <th {...column.getHeaderProps()} className="  py-4 text-sm ">
                 {column.render('Header')}
               </th>
             ))}

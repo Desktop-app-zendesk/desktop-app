@@ -1,9 +1,8 @@
-import ExpandableRowTable from './ExpandableRowTable'
-
+import ExpandableRowTable from './ExpandableRowTable';
 
 function MyTicket() {
   return (
-    <ExpandableRowTable/>
+    <ExpandableRowTable />
     // <section>
     //   <div className="relative overflow-x-12">
     //     <table className="w-full text-sm mt-1 text-left">
