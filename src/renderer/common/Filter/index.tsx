@@ -24,13 +24,6 @@ function Sidebar() {
           <ArrowCircleLeft size={32} />
         </button>
       )}
-      {/* <div
-        className={`sidebar-padding ${
-          showSidebar ? 'translate-x-0 ' : 'translate-x-full'
-        }`}
-      >
-        <Filters/>
-      </div> */}
       <div
         className={`top-0 right-0 bg-black p-20 pl-22 pr-23 px-5 py-14 text-white fixed h-full z-40  ease-in-out duration-300
       }
