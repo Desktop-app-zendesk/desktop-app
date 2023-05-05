@@ -1,27 +1,37 @@
-import {
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
-} from '@material-tailwind/react';
-import { Funnel } from '@phosphor-icons/react';
+import { Funnel, ArrowCircleLeft } from '@phosphor-icons/react';
+import { useState } from 'react';
+import Filters from './Sidebar';
 
-export default function Filter() {
+function Sidebar() {
+  const [showSidebar, setShowSidebar] = useState(false);
+
   return (
-    <div className="flex items-center justify-end mb-1 px-4">
-      <Menu>
-        <MenuHandler>
-          <button
-            className="bg-zen-green-800 px-1 py-1 rounded text-white"
-            type="button"
-          >
-            <Funnel size={12} color="#FFFFFF" />
-          </button>
-        </MenuHandler>
-        <MenuList>
-          <MenuItem>Filter2</MenuItem>
-        </MenuList>
-      </Menu>
+    <div className="filter-sidebar">
+      <button
+        className="filter-funnel"
+        type="button"
+        onClick={() => setShowSidebar(!showSidebar)}
+      >
+        <Funnel size={12} color="#FFFFFF" />
+      </button>
+
+      {showSidebar && (
+        <button
+          className="filter-collapse"
+          type="button"
+          onClick={() => setShowSidebar(!showSidebar)}
+        >
+          <ArrowCircleLeft size={32} />
+        </button>
+      )}
+      <div
+        className={`top-0 right-0 bg-white p-20 pl-22 pr-23 px-5 py-14 text-white fixed h-full z-40  ease-in-out duration-300
+      }
+    } ${showSidebar ? 'translate-x-0 ' : 'translate-x-full'}`}
+      >
+        <Filters />
+      </div>
     </div>
   );
 }
+export default Sidebar;
