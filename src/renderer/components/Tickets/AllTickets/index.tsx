@@ -9,9 +9,7 @@ function AllTickets() {
     <section>
       <div
         className="relative overflow-x-12 cursor-pointer"
-        onClick={() => {
-          handleClick();
-        }}
+        onClick={handleClick}
         aria-hidden="true"
       >
         <table className="w-full text-sm mt-1 text-left">

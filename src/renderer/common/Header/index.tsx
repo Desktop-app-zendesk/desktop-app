@@ -4,19 +4,24 @@ import {
   MenuList,
   MenuItem,
 } from '@material-tailwind/react';
+import { House } from '@phosphor-icons/react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
-    <div className="h-12 border-b bg-zen-green-800 mb-4">
+    <div className="h-12 border-b bg-zen-green-800 mb-4 px-4 flex justify-between items-center">
+      <Link to="/">
+        <House size={24} color="#FFFFFF" weight="fill" />
+      </Link>
       <Menu>
         <MenuHandler>
           <button
-            className="absolute w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 right-1 top-1"
+            className="p-1 bg-gray-100 relative rounded-full dark:bg-gray-600"
             type="button"
             data-toggle="true"
           >
             <svg
-              className="absolute w-12 h-12 text-gray-400 -left-1 -top-0"
+              className="w-6 h-6 text-gray-400"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
