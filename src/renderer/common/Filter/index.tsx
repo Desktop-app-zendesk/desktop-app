@@ -1,43 +1,22 @@
 import { Funnel, ArrowCircleLeft } from '@phosphor-icons/react';
 import { useState } from 'react';
-import FilterSelector from './Sidebar';
+import FilterSelector from './FilterSelector';
+import {
+  ticketOptions,
+  requesterOptions,
+  requestDateOptions,
+  typeOptions,
+  priorityOptions,
+} from './Constant';
 
 function Sidebar() {
   const [showSidebar, setShowSidebar] = useState(false);
-  const ticketOptions = [
-    { value: 'new', label: 'New' },
-    { value: 'open', label: 'Open' },
-    { value: 'pending', label: 'Pending' },
-    { value: 'solved', label: 'Solved' },
-  ];
-  const requesterOptions = [
-    { value: 'any', label: 'Any' },
-    { value: 'assignee', label: '(assignee)' },
-    { value: 'current user', label: '(current user)' },
-  ];
-  const requestDateOptions = [
-    { value: 'any', label: 'In the last 24 hours' },
-    { value: 'assignee', label: 'In the last 6 months' },
-    { value: 'current user', label: 'In the last 7 days' },
-    { value: 'assignee', label: 'In the last year' },
-    { value: 'current user', label: 'Over a year ago' },
-  ];
-  const typeOptions = [
-    { value: 'any', label: 'Any' },
-    { value: 'assignee', label: '-' },
-    { value: 'current user', label: 'Question' },
-    { value: 'assignee', label: 'Incident' },
-    { value: 'current user', label: 'Problem' },
-    { value: 'current user', label: 'Task' },
-  ];
-
-  const priorityOptions = [
-    { value: 'any', label: 'Any' },
-    { value: 'assignee', label: '-' },
-    { value: 'current user', label: 'Low' },
-    { value: 'assignee', label: 'Normal' },
-    { value: 'current user', label: 'High' },
-    { value: 'current user', label: 'Urgent' },
+  const filterOptions = [
+    { label: 'Ticket Status', options: ticketOptions },
+    { label: 'Requester', options: requesterOptions },
+    { label: 'Request date', options: requestDateOptions },
+    { label: 'Type', options: typeOptions },
+    { label: 'Priority', options: priorityOptions },
   ];
 
   return (
@@ -64,11 +43,13 @@ function Sidebar() {
           showSidebar ? 'translate-x-0 ' : 'translate-x-full'
         }`}
       >
-        <FilterSelector label="Ticket Status" options={ticketOptions} />
-        <FilterSelector label="Requester" options={requesterOptions} />
-        <FilterSelector label="Requester" options={requestDateOptions} />
-        <FilterSelector label="Requester" options={typeOptions} />
-        <FilterSelector label="Requester" options={priorityOptions} />
+        {filterOptions.map((option) => (
+          <FilterSelector
+            key={option.label}
+            label={option.label}
+            options={option.options}
+          />
+        ))}
       </div>
     </div>
   );
