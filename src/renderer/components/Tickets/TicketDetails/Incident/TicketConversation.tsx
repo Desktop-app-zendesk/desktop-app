@@ -189,7 +189,6 @@ function TicketConversation() {
                             aria-hidden="true"
                             focusable="false"
                             className="sc-1ax60z6-0 hLudKG inline-block"
-                            onClick={() => handleCancelFile(index)}
                           >
                             <path
                               fill="none"
@@ -208,6 +207,24 @@ function TicketConversation() {
                         >
                           {`${file.name} (${formatFileSize(file.size)})`}
                         </a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="13"
+                          height="14"
+                          viewBox="0 0 12 12"
+                          aria-hidden="true"
+                          focusable="false"
+                          data-garden-id="buttons.icon"
+                          data-garden-version="8.63.2"
+                          className="StyledIcon-sc-19meqgg-0 cqORhS sc-15vjzlm-7 kcQcZk"
+                          onClick={() => handleCancelFile(index)}
+                        >
+                          <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            d="M3 9l6-6m0 6L3 3"
+                          />
+                        </svg>
                       </div>
                     ))}
                   </div>
