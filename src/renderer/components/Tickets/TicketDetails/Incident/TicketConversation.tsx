@@ -146,8 +146,68 @@ function TicketConversation() {
                 value={text}
                 onChange={handleChange}
               />
+              {files.length > 0 && (
+                <div>
+                  {files.map((file, index) => (
+                    <div
+                      key={file.name}
+                      className="flex items-center justify-between"
+                    >
+                      <div>
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            viewBox="0 0 12 12"
+                            aria-hidden="true"
+                            focusable="false"
+                            className="sc-1ax60z6-0 hLudKG inline-block pr-2"
+                          >
+                            <path
+                              fill="none"
+                              stroke="#B552E2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M10.5 3.21V11c0 .28-.22.5-.5.5H2c-.28 0-.5-.22-.5-.5V1c0-.28.22-.5.5-.5h5.79c.13 0 .26.05.35.15l2.21 2.21c.1.09.15.21.15.35zM7.5.5V3c0 .28.22.5.5.5h2.5m-7 6L5 8l1.5 1.5 1-1 1 1"
+                            />
+                            <circle cx="8" cy="6" r="1" fill="currentColor" />
+                          </svg>
+                        </span>
+                        <a
+                          href={fileUrls[index]}
+                          download={file.name}
+                          className="text-sm"
+                        >
+                          {`${file.name} (${formatFileSize(file.size)})`}
+                        </a>
+                      </div>
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          viewBox="0 0 12 12"
+                          aria-hidden="true"
+                          focusable="false"
+                          data-garden-id="buttons.icon"
+                          data-garden-version="8.63.2"
+                          className="StyledIcon-sc-19meqgg-0 cqORhS sc-15vjzlm-7 kcQcZk px-2"
+                          onClick={() => handleCancelFile(index)}
+                        >
+                          <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            d="M3 9l6-6m0 6L3 3"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-            <div className="flex items-center relative">
+            <div className="flex items-center relative pr-2 pt-1 pb-1">
               <div className="flex cursor-pointer p-1">
                 <label htmlFor="attachment">
                   <svg
@@ -176,62 +236,6 @@ function TicketConversation() {
                   multiple
                   onChange={handleFileUpload}
                 />
-                {files.length > 0 && (
-                  <div>
-                    {files.map((file, index) => (
-                      <div
-                        key={file.name}
-                        className="flex items-center justify-between"
-                      >
-                        <span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="12"
-                            height="12"
-                            viewBox="0 0 12 12"
-                            aria-hidden="true"
-                            focusable="false"
-                            className="sc-1ax60z6-0 hLudKG inline-block"
-                          >
-                            <path
-                              fill="none"
-                              stroke="currentColor"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M10.5 3.21V11c0 .28-.22.5-.5.5H2c-.28 0-.5-.22-.5-.5V1c0-.28.22-.5.5-.5h5.79c.13 0 .26.05.35.15l2.21 2.21c.1.09.15.21.15.35zM7.5.5V3c0 .28.22.5.5.5h2.5m-7 6L5 8l1.5 1.5 1-1 1 1"
-                            />
-                            <circle cx="8" cy="6" r="1" fill="currentColor" />
-                          </svg>
-                        </span>
-                        <a
-                          href={fileUrls[index]}
-                          download={file.name}
-                          className="text-sm"
-                        >
-                          {`${file.name} (${formatFileSize(file.size)})`}
-                        </a>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="13"
-                          height="14"
-                          viewBox="0 0 12 12"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-garden-id="buttons.icon"
-                          data-garden-version="8.63.2"
-                          className="StyledIcon-sc-19meqgg-0 cqORhS sc-15vjzlm-7 kcQcZk"
-                          onClick={() => handleCancelFile(index)}
-                        >
-                          <path
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            d="M3 9l6-6m0 6L3 3"
-                          />
-                        </svg>
-                      </div>
-                    ))}
-                  </div>
-                )}
               </div>
 
               <span>
