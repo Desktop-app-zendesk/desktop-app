@@ -44,7 +44,7 @@ function Footer() {
             <div>
               <Button
                 size="sm"
-                className="bg-zen-gray-800 font-medium normal-case mr-0.5 rounded-r-none px-2 py-2 shadow-none hover:shadow-none"
+                className="bg-zen-green-800 font-medium normal-case mr-0.5 rounded-r-none px-2 py-2 shadow-none hover:shadow-none"
                 onClick={() => navigate('/')}
               >
                 <div>
@@ -60,7 +60,7 @@ function Footer() {
                 id="dropdownTopButton"
                 data-dropdown-toggle="dropdownTop"
                 data-dropdown-placement="top"
-                className="mr-1 mb-1 md:mb-0 text-white bg-zen-gray-800 focus:outline-none  font-medium rounded-r-md rounded-l-none text-sm px-3 py-2 text-center inline-flex items-center"
+                className="mr-1 mb-1 md:mb-0 text-white bg-zen-green-800 focus:outline-none  font-medium rounded-r-md rounded-l-none text-sm px-3 py-2 text-center inline-flex items-center"
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
               >

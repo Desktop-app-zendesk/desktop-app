@@ -128,7 +128,10 @@ function TicketConversation() {
                 />
               </svg>
             </div>
-            <button type="button" className="text-blue-500 hover:underline">
+            <button
+              type="button"
+              className="text-zen-green-800 hover:underline"
+            >
               CC
             </button>
           </div>
@@ -139,7 +142,7 @@ function TicketConversation() {
               <textarea
                 id="comment"
                 rows={4}
-                className="w-full h-[60px] max-h-[150px] px-0 text-sm bg-transparent text-gray-900 outline-none overflow-y-scroll"
+                className="w-full h-[60px] max-h-[150px] px-0 text-md bg-transparent text-gray-900 outline-none overflow-y-scroll"
                 value={text}
                 onChange={handleChange}
               />
