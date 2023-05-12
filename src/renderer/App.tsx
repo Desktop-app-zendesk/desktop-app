@@ -1,6 +1,5 @@
 import React from 'react';
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import Filter from 'renderer/common/Filter';
 import Header from './common/Header';
 import './App.css';
 import Tickets from './components/Tickets';
@@ -10,7 +9,6 @@ export default function App() {
   return (
     <>
       <Header />
-      <Filter />
       <Router>
         <Routes>
           <Route path="/" element={<Tickets />} />
