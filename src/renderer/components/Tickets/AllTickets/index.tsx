@@ -1,4 +1,3 @@
-// import { useNavigate } from 'react-router-dom';
 import ExpandableRowTable from './ExpandableRowTable';
 
 function AllTickets() {
