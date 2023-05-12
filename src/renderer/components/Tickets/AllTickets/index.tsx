@@ -1,10 +1,25 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function AllTickets() {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate('/ticket-details');
   };
+  useEffect(() => {
+    axios
+      .get('http://localhost:3000/tickets')
+      // eslint-disable-next-line promise/always-return
+      .then((res) => {
+        // eslint-disable-next-line no-console
+        console.log(res.data);
+      })
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.log(err);
+      });
+  }, []);
   return (
     <section>
       <div
