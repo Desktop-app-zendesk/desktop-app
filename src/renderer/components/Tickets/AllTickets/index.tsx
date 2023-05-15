@@ -1,19 +1,14 @@
-/* eslint-disable promise/always-return */
-/* eslint-disable no-console */
 import { useEffect } from 'react';
 import axios from 'axios';
 import ExpandableRowTable from './ExpandableRowTable';
 
 function AllTickets() {
+  const fetchApi = async () => {
+    const apiData = await axios.get('http://localhost:3000/tickets');
+    console.log(apiData); // eslint-disable-line
+  };
   useEffect(() => {
-    axios
-      .get('http://localhost:3000/tickets')
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    fetchApi();
   }, []);
   return <ExpandableRowTable row={undefined} />;
 }
