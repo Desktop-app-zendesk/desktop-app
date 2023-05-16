@@ -18,17 +18,20 @@ function TicketConversation() {
     const newFileUrls = Array.from<File>(fileList).map((file) =>
       URL.createObjectURL(file)
     );
-
     setFileUrls([...fileUrls, ...newFileUrls]);
   };
 
   const handleCancelFile = (index: any) => {
-    const newFiles = [...files];
-    newFiles.splice(index, 1);
+    const newFiles = files.filter((_, i) => i !== index);
     setFiles(newFiles);
-    const newFileUrls = [...fileUrls];
-    URL.revokeObjectURL(newFileUrls[index]);
-    newFileUrls.splice(index, 1);
+    const newFileUrls = fileUrls.filter((_, i) => {
+      if (i === index) {
+        URL.revokeObjectURL(fileUrls[index]);
+        return false;
+      }
+      return true;
+    });
+
     setFileUrls(newFileUrls);
   };
 
@@ -179,7 +182,7 @@ function TicketConversation() {
                           download={file.name}
                           className="text-sm"
                         >
-                          {`${file.name} (${formatFileSize(file.size)})`}
+                          {`${file.name} (${formatFileSize(file.size)}) `}
                         </a>
                       </div>
                       <div>
