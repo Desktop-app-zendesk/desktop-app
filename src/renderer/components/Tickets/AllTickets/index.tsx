@@ -16,7 +16,7 @@ function AllTickets() {
           <tbody>
             <tr className="border-t border-b">
               <td className="px-6 py-4 text-sm">Open</td>
-              <td className="px-6 py-4 text-sm">Sample Ticket</td>
+              <td className="px-6 py-4 text-sm">Sample Ticket </td>
               <td className="text-sm">details</td>
             </tr>
           </tbody>
