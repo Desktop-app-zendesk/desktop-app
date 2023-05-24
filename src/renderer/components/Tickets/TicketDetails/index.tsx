@@ -22,7 +22,7 @@ function TicketDetails() {
 
   return (
     <div>
-      <div className="border-t border-b border-solid border-zen-gray-200 py-2">
+      <div className="border-t border-b border-solid border-zen-gray-200 py-1">
         <div className="inline-flex rounded-md shadow-sm m-1" role="group">
           <DialogForm
             id="add_new_organization"

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@material-tailwind/react';
 
@@ -6,12 +6,25 @@ function Footer() {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState('Open');
+  const divRef = useRef<HTMLDivElement>(null);
   const svgClass = isOpen ? '' : 'rotate-180';
   const ticketStatusMenu = [
     { status: 'Open', color: 'zen-orange-500' },
     { status: 'Pending', color: 'blue-500' },
     { status: 'Solved', color: 'gray-500' },
   ];
+
+  useEffect(() => {
+    const handleClickOutside = (event: any) => {
+      if (divRef.current && !divRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   return (
     <footer>
       <div className="flex border-b border-solid border-zen-gray-200 pt-1 h-10  ">
@@ -19,6 +32,7 @@ function Footer() {
           {isOpen && (
             <div
               id="dropdownTop"
+              ref={divRef}
               className="bg-white divide-y divide-gray-100 rounded-l-md shadow  dark:bg-gray-700 absolute h-[100px] w-[120px] right-[7px] top-[-104px] "
             >
               <ul className="py-3 text-sm font-semibold text-zen-gray-800 dark:text-zen-gray-800 list-none pl-6">
@@ -44,7 +58,7 @@ function Footer() {
             <div>
               <Button
                 size="sm"
-                className="bg-zen-gray-800 font-medium normal-case mr-0.5 rounded-r-none px-2 py-2 shadow-none hover:shadow-none"
+                className="bg-zen-green-800 font-medium normal-case mr-0.5 rounded-r-none px-2 py-2 shadow-none hover:shadow-none"
                 onClick={() => navigate('/')}
               >
                 <div>
@@ -60,7 +74,7 @@ function Footer() {
                 id="dropdownTopButton"
                 data-dropdown-toggle="dropdownTop"
                 data-dropdown-placement="top"
-                className="mr-1 mb-1 md:mb-0 text-white bg-zen-gray-800 focus:outline-none  font-medium rounded-r-md rounded-l-none text-sm px-3 py-2 text-center inline-flex items-center"
+                className="mr-1 mb-1 md:mb-0 text-white bg-zen-green-800 focus:outline-none  font-medium rounded-r-md rounded-l-none text-sm px-3 py-2 text-center inline-flex items-center"
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
               >
