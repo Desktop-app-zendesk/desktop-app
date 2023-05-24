@@ -1,8 +1,8 @@
 import axios from 'axios'
-import { APIROUTES } from '../utils/routes';
+import { API_ROUTES } from '../utils/routes';
 
 export default axios.create({
-   baseURL: APIROUTES.BASE_URL,
+   baseURL: API_ROUTES.BASE_URL,
    headers: {
       //  Authorization: `<Your Auth Token>`,
       'Content-Type': 'application/json',

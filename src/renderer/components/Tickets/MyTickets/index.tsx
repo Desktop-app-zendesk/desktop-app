@@ -14,7 +14,6 @@ function MyTicket() {
     const response = await getMyTickets()
     setTickets(response?.data)
     setTicketList(response?.data)
-    console.log("ticketList", ticketList)
   };
 
   useEffect(() => {

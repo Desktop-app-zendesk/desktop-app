@@ -13,7 +13,6 @@ function AllTickets() {
     const response = await getTickets()
     setTickets(response?.data)
     setTicketList(response?.data)
-    console.log("ticketList", ticketList)
   };
 
   useEffect(() => {
