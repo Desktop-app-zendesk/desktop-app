@@ -66,7 +66,7 @@
           "created_at": "2023-04-21T08:24:22Z",
           "updated_at": "2023-04-21T08:24:22Z",
           "type": "incident",
-          "": "test zendesk",
+          "subject": "test zendesk",
           "raw_subject": "test zendesk",
           "description": "this is test ticket",
           "priority": "low",
