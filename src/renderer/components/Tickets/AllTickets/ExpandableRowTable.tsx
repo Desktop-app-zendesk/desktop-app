@@ -85,7 +85,7 @@ const Row: React.FC<RowProps> = ({ row }) => {
         </td>
         <td className="py-1">{original.subject}</td>
         <td className="py-1">{original.requester}</td>
-        <Link to="/ticket-details"><Eye /></Link>
+        <td><Link to="/ticket-details"><Eye /></Link></td>
       </tr>
           
       {isExpanded && (
