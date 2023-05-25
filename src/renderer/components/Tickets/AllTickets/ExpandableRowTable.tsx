@@ -2,6 +2,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useMemo, useState } from 'react';
 import { useTable, Column, TableOptions } from 'react-table';
+import { Link } from 'react-router-dom';
+import { Eye } from '@phosphor-icons/react';
 
 interface Data {
   id: number;
@@ -62,8 +64,7 @@ interface RowProps {
   row: any;
 }
 
-const emojis = ['👉', '👇'];
-
+ const emojis = ['➡️','⬇️'];
 const Row: React.FC<RowProps> = ({ row }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
   const { original } = row;
@@ -84,8 +85,9 @@ const Row: React.FC<RowProps> = ({ row }) => {
         </td>
         <td className="py-1">{original.subject}</td>
         <td className="py-1">{original.requester}</td>
+        <td><Link to="/ticket-details"><Eye /></Link></td>
       </tr>
-
+          
       {isExpanded && (
         <tr>
           <td colSpan={10000}>

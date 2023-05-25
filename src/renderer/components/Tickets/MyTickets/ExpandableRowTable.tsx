@@ -62,7 +62,7 @@ interface RowProps {
   row: any;
 }
 
-const emojis = ['👉', '👇'];
+const emojis = ['➡️', '⬇️'];
 
 const Row: React.FC<RowProps> = ({ row }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
