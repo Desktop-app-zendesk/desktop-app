@@ -1,16 +1,25 @@
-import { useEffect } from 'react';
-import axios from 'axios';
+import { useState, useContext, useEffect } from 'react';
 import ExpandableRowTable from './ExpandableRowTable';
+import { TicketDetails } from "renderer/common/Models";
+import { AppContext } from 'renderer/containers/AppContext';
+import { getTickets } from '../../../common/service/ticketService'
 
 function AllTickets() {
+  const value: any = useContext(AppContext);
+  const { ticketList, setTicketList } = value;
+  const [tickets, setTickets] = useState<Array<TicketDetails>>([]);
+
   const fetchApi = async () => {
-    const apiData = await axios.get('http://localhost:3000/tickets');
-    console.log(apiData); // eslint-disable-line
+    const response = await getTickets()
+    setTickets(response?.data)
+    setTicketList(response?.data)
   };
+
   useEffect(() => {
     fetchApi();
   }, []);
-  return <ExpandableRowTable row={undefined} />;
+
+  return <ExpandableRowTable data={tickets} />;
 }
 
 export default AllTickets;

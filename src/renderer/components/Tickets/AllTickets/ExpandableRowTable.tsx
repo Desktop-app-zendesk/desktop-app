@@ -1,52 +1,26 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useMemo, useState } from 'react';
+import React, { useState, useContext } from 'react';
+import Moment from 'moment';
 import { useTable, Column, TableOptions } from 'react-table';
+import { AppContext } from 'renderer/containers/AppContext';
+import { TicketList } from 'renderer/common/Models';
+import { useNavigate } from 'react-router-dom';
 
 interface Data {
   id: number;
-  ticketstatus: string;
+  status: string;
   subject: string;
   email: string;
-  requester: string;
-  requested: string;
+  requester_id: string;
+  created_at: string;
   priority: string;
 }
-
-const data: Data[] = [
-  {
-    id: 1,
-    ticketstatus: 'Close',
-    subject: 'Zendesk Site not works properly',
-    email: 'john.doe@example.com',
-    requester: 'Customer',
-    requested: '26jan 2023',
-    priority: 'Medium',
-  },
-  {
-    id: 2,
-    ticketstatus: 'Open',
-    subject: 'site Error occurs on tickets creates',
-    email: 'jane.doe@example.com',
-    requester: 'Customer',
-    requested: '1jan 2023',
-    priority: 'Low',
-  },
-  {
-    id: 3,
-    ticketstatus: 'Close',
-    subject: 'Zendesk call features not working',
-    email: 'bob.smith@example.com',
-    requester: 'Customer',
-    requested: '15march 2023',
-    priority: 'High',
-  },
-];
 
 const columns: Column<Data>[] = [
   {
     Header: 'Ticket status',
-    accessor: 'ticketstatus',
+    accessor: 'status',
   },
   {
     Header: 'Subject',
@@ -54,7 +28,7 @@ const columns: Column<Data>[] = [
   },
   {
     Header: 'Requester',
-    accessor: 'requester',
+    accessor: 'requester_id',
   },
 ];
 
@@ -62,7 +36,13 @@ interface RowProps {
   row: any;
 }
 
+interface DataProps {
+  data: any;
+}
+
 const emojis = ['👉', '👇'];
+
+
 
 const Row: React.FC<RowProps> = ({ row }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
@@ -80,19 +60,19 @@ const Row: React.FC<RowProps> = ({ row }) => {
       <tr onClick={() => setIsExpanded(!isExpanded)} className="border-b">
         <td className="py-1" onClick={handleEmojiToggle} aria-hidden="true">
           {currentEmoji}
-          {original.ticketstatus}
+          {original?.status}
         </td>
-        <td className="py-1">{original.subject}</td>
-        <td className="py-1">{original.requester}</td>
+        <td className="py-1">{original?.subject}</td>
+        <td className="py-1">{original?.requester_id}</td>
       </tr>
 
       {isExpanded && (
         <tr>
           <td colSpan={10000}>
-            <p>Status:-{original.ticketstatus}</p>
+            <p>Status:-{original.status}</p>
             <p>SamplTicket:-{original.subject}</p>
-            <p>Requester:-{original.requester}</p>
-            <p>Requested:-{original.requested}</p>
+            <p>Requester:-{original.requester_id}</p>
+            <p>Requested:-{Moment(original.created_at).format('DD-MM-YYYY')}</p>
             <p>Priority:-{original.priority}</p>
           </td>
         </tr>
@@ -101,11 +81,9 @@ const Row: React.FC<RowProps> = ({ row }) => {
   );
 };
 
-const ExpandableRowTable: React.FC<RowProps> = () => {
-  const tableOptions: TableOptions<Data> = useMemo(
-    () => ({ columns, data }),
-    []
-  );
+const ExpandableRowTable: React.FC<DataProps> = ({ data }) => {
+
+  const tableOptions: TableOptions<Data> = { columns, data }
   const tableInstance = useTable(tableOptions);
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     tableInstance;
