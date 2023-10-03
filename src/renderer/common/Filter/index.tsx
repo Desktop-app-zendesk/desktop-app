@@ -1,27 +1,57 @@
+import { Funnel, ArrowCircleLeft } from '@phosphor-icons/react';
+import { useState } from 'react';
+import FilterSelector from './FilterSelector';
 import {
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
-} from '@material-tailwind/react';
-import { Funnel } from '@phosphor-icons/react';
+  ticketOptions,
+  requesterOptions,
+  requestDateOptions,
+  typeOptions,
+  priorityOptions,
+} from './Constant';
 
-export default function Filter() {
+function Sidebar() {
+  const [showSidebar, setShowSidebar] = useState(false);
+  const filterOptions = [
+    { label: 'Ticket Status', options: ticketOptions },
+    { label: 'Requester', options: requesterOptions },
+    { label: 'Request date', options: requestDateOptions },
+    { label: 'Type', options: typeOptions },
+    { label: 'Priority', options: priorityOptions },
+  ];
+
   return (
-    <div className="flex items-center justify-end mb-1 px-4">
-      <Menu>
-        <MenuHandler>
-          <button
-            className="bg-zen-green-800 px-1 py-1 rounded text-white"
-            type="button"
-          >
-            <Funnel size={12} color="#FFFFFF" />
-          </button>
-        </MenuHandler>
-        <MenuList>
-          <MenuItem>Filter2</MenuItem>
-        </MenuList>
-      </Menu>
+    <div className="filter-sidebar">
+      <button
+        className="filter-funnel"
+        type="button"
+        onClick={() => setShowSidebar(!showSidebar)}
+      >
+        <Funnel size={12} color="#FFFFFF" />
+      </button>
+
+      {showSidebar && (
+        <button
+          className="filter-collapse"
+          type="button"
+          onClick={() => setShowSidebar(!showSidebar)}
+        >
+          <ArrowCircleLeft size={32} />
+        </button>
+      )}
+      <div
+        className={`sidebar-padding ${
+          showSidebar ? 'translate-x-0 ' : 'translate-x-full'
+        }`}
+      >
+        {filterOptions.map((option) => (
+          <FilterSelector
+            key={option.label}
+            label={option.label}
+            options={option.options}
+          />
+        ))}
+      </div>
     </div>
   );
 }
+export default Sidebar;

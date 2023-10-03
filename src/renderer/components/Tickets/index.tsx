@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Filter from 'renderer/common/Filter';
 import AllTickets from './AllTickets';
 import MyTicket from './MyTickets';
 
@@ -21,6 +22,7 @@ export default function Tickets() {
 
   return (
     <div>
+      <Filter />
       <div className="px-4 ">
         <button
           className={`zen-tab-headers ${

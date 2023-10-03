@@ -1,29 +1,25 @@
-import { useNavigate } from 'react-router-dom';
+import { useState, useContext, useEffect } from 'react';
+import ExpandableRowTable from './ExpandableRowTable';
+import { TicketDetails } from "renderer/common/Models";
+import { AppContext } from 'renderer/containers/AppContext';
+import { getTickets } from '../../../common/service/ticketService'
 
 function AllTickets() {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate('/ticket-details');
+  const value: any = useContext(AppContext);
+  const { ticketList, setTicketList } = value;
+  const [tickets, setTickets] = useState<Array<TicketDetails>>([]);
+
+  const fetchApi = async () => {
+    const response = await getTickets()
+    setTickets(response?.data)
+    setTicketList(response?.data)
   };
-  return (
-    <section>
-      <div
-        className="relative overflow-x-12 cursor-pointer"
-        onClick={handleClick}
-        aria-hidden="true"
-      >
-        <table className="w-full text-sm mt-1 text-left">
-          <tbody>
-            <tr className="border-t border-b">
-              <td className="px-6 py-4 text-sm">Open</td>
-              <td className="px-6 py-4 text-sm">Sample Ticket</td>
-              <td className="text-sm">details</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  );
+  
+  useEffect(() => {
+    fetchApi();
+  }, []);
+
+  return <ExpandableRowTable data={tickets} />;
 }
 
 export default AllTickets;

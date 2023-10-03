@@ -1,19 +1,25 @@
+import { useState, useContext, useEffect } from "react";
+import ExpandableRowTable from './ExpandableRowTable';
+import { TicketDetails } from "renderer/common/Models";
+import { AppContext } from "renderer/containers/AppContext";
+import { getMyTickets } from "renderer/common/service/ticketService";
+
+
 function MyTicket() {
-  return (
-    <section>
-      <div className="relative overflow-x-12">
-        <table className="w-full text-sm mt-1 text-left">
-          <tbody>
-            <tr className="border-t border-b">
-              <td className="px-6 py-4 text-sm">Open</td>
-              <td className="px-6 py-4 text-sm">Sample Ticket 1</td>
-              <td className="text-sm">details</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  );
+  const value: any = useContext(AppContext);
+  const { ticketList, setTicketList } = value;
+  const [tickets, setTickets] = useState<Array<TicketDetails>>([]);
+
+  const fetchApi = async () => {
+    const response = await getMyTickets()
+    setTickets(response?.data)
+    setTicketList(response?.data)
+  };
+
+  useEffect(() => {
+    fetchApi();
+  }, []);
+  return <ExpandableRowTable data={tickets} />;
 }
 
 export default MyTicket;

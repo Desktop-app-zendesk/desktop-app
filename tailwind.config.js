@@ -9,6 +9,7 @@ module.exports = withMT({
         'zen-green-800': '#03363D',
         'zen-white-100': '#F8F9F9',
         'zen-orange-500': '#E34F32',
+        'zen-blue-400': '#144a75',
         'zen-blue-500': '#1F73B7',
         'zen-gray-200': '#D8DCDE',
         'zen-gray-300': '#D4D4D8',

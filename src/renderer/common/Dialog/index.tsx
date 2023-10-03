@@ -55,13 +55,13 @@ function DialogForm(props: Props) {
             variant="text"
             color="red"
             onClick={handleOpen}
-            className="middle none center mr-1 rounded-lg py-3 px-6 font-sans text-xs font-medium text-zen-blue-500 transition-all hover:bg-zen-blue-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none normal-case"
+            className="middle none center mr-1 rounded-lg py-3 px-6 font-sans text-xs font-medium text-zen-green-800 transition-all hover:bg-zen-green-800/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none normal-case"
           >
             <span>Cancel</span>
           </Button>
           <Button
             variant="gradient"
-            className="middle none center rounded-lg bg-gradient-to-tr from-zen-blue-500 to-zen-blue-500 py-3 px-6 font-sans text-xs font-bold text-white shadow-md shadow-zen-blue-500/20 transition-all hover:shadow-lg hover:shadow-zen-blue-500-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none normal-case"
+            className="middle none center rounded-lg bg-gradient-to-tr from-zen-green-800 to-zen-green-800 py-3 px-6 font-sans text-xs font-bold text-white shadow-md shadow-zen-green-800/20 transition-all hover:shadow-lg hover:shadow-zen-green-800/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none normal-case"
             onClick={handleOpen}
           >
             <span>Add</span>
