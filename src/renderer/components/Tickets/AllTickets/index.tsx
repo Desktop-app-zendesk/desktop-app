@@ -14,7 +14,7 @@ function AllTickets() {
     setTickets(response?.data)
     setTicketList(response?.data)
   };
-
+  
   useEffect(() => {
     fetchApi();
   }, []);
